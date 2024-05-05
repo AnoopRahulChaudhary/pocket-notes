@@ -1,4 +1,4 @@
-import AppName from './components/AppName';
+import AppName from './components/AppName'
 import './App.css';
 
 function App() {
