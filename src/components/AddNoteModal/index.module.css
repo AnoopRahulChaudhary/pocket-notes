@@ -1,0 +1,6 @@
+.add_note_modal_container {
+    z-index: 1;
+    position: fixed;
+    top: 40vh;
+    left: 40vw;
+}
