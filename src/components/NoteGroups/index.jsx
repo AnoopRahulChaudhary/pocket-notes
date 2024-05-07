@@ -4,6 +4,7 @@ import NoteGroup from "../NoteGroup";
 
 function NoteGroups() {
     const groups = useSelector(state => state.NoteGroupReducer.groups);
+    console.debug(groups);
 
     return (
         <div>

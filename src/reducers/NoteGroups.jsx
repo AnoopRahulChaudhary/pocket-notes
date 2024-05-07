@@ -1,6 +1,7 @@
+const oldNoteGroupList = JSON.parse(localStorage.getItem("noteGroupList")|| '[]');
 const initialState = {
     groups : [
-        
+        ...oldNoteGroupList
     ]
 }
 

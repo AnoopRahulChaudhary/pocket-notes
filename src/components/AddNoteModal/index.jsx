@@ -19,16 +19,43 @@ function AddNoteModal(display) {
             [name] : value
         })
     }
+
+    function getOldNoteGroupList() {
+        const oldNoteGroupList = JSON.parse(localStorage.getItem("noteGroupList")) || [];
+        return oldNoteGroupList;
+    }
+
+    function isNoteGroupPresent(noteGroupName){
+        for(let noteGroup of getOldNoteGroupList()) {
+            if (noteGroup.groupName === noteGroupName) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    function addNewNoteGroupToLocalStorage(newNoteGroup) {
+        localStorage.setItem("noteGroupList", JSON.stringify([...getOldNoteGroupList(), newNoteGroup]));
+    }
     
     function addNewGroup(event) {
         event.preventDefault();
+
+        if (isNoteGroupPresent(groupData.groupName)) {
+            alert('This group is already present, please select alternate name');
+            return;
+        }
+
+        const newNoteGroup = {
+            groupName : groupData.groupName,
+            color : groupData.color
+        }
+
+        addNewNoteGroupToLocalStorage(newNoteGroup);
         
         dispatch({
             type : 'ADD',
-            payload: {
-                groupName : groupData.groupName,
-                color : groupData.color
-            }
+            payload: newNoteGroup
         })
         display = 'none';
     }
