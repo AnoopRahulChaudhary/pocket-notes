@@ -4,3 +4,14 @@
     top: 40vh;
     left: 40vw;
 }
+
+.choose_color > input {
+    appearance: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+}
+
+.choose_color > input:checked {
+    border: 2px solid black;
+}

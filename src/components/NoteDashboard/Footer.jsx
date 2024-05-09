@@ -42,7 +42,11 @@ function Footer({noteGroup}) {
                     rows="10">
                 {newNoteContent}
             </textarea>
-            <button onClick={addNewNote}>Add Note</button>
+            <div>
+                {newNoteContent && <button onClick={addNewNote}>Add Note</button>}
+                {!newNoteContent && <button onClick={addNewNote} disabled>Add Note</button>}
+            </div>
+            
         </div>
     )
 
