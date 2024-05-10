@@ -38,10 +38,15 @@ function CreateNoteGroup() {
             groupName : formData.get('groupName'),
             color : formData.get('color')
         }
-        console.log(JSON.stringify(groupData));
+        console.debug(JSON.stringify(groupData));
 
         if (!groupData.groupName) {
             alert('Group Name can\'t empty');
+            return;
+        }
+
+        if (!groupData.color) {
+            alert('Group color can\'t empty');
             return;
         }
 
@@ -72,7 +77,7 @@ function CreateNoteGroup() {
 
                 <div style={{display: 'flex'}}>
                     <div><label htmlFor="colour">Choose colour</label></div>
-                    <div class={styles.choose_color}>
+                    <div className={styles.choose_color}>
                         <input style={{backgroundColor: '#B38BFA'}} type="radio" name="color" value="#B38BFA" />
                         <input style={{backgroundColor: '#FF79F2'}} type="radio" name="color" value="#FF79F2" />
                         <input style={{backgroundColor: '#43E6FC'}} type="radio" name="color" value="#43E6FC" />
