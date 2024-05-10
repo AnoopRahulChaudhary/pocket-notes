@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import AddNoteModal from "../AddNoteModal";
 import { useDispatch, useSelector } from "react-redux";
+import { showNoteGroupCreator } from "../../actions/createNoteGroup";
 
 function AddNoteGroup() {
     const showModal = useSelector(state => state.createNoteGroupReducer.show);
@@ -9,8 +10,8 @@ function AddNoteGroup() {
     return (
         <div>
             {showModal && <AddNoteModal />}
-            <button 
-                    onClick={() => dispatch({type: 'SHOW_CREATE_NOTE_GROUP_CONTAINER'})}>
+            <button id="addNoteGroup"
+                    onClick={() => dispatch(showNoteGroupCreator())}>
                 Add Note Group
             </button>
         </div>

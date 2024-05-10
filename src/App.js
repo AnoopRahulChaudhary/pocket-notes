@@ -4,6 +4,7 @@ import AddNoteGroup from './components/AddNoteGroup';
 import NoteGroups from './components/NoteGroups';
 import { useDispatch, useSelector } from 'react-redux';
 import NoteDashboard from './components/NoteDashboard';
+import { hideNoteGroupCreator } from './actions/createNoteGroup';
 
 function App() {
   const selectedNotesGroup = useSelector(state => state.selectedNoteGroupReducer.name);
@@ -15,10 +16,8 @@ function App() {
         return;
       }
 
-      if (!clickedElement.closest('#createNoteGroupContainer')) {
-        dispatch({
-          type: 'HIDE_CREATE_NOTE_GROUP_CONTAINER'
-        })
+      if (!clickedElement.closest('#createNoteGroupContainer, #addNoteGroup')) {
+        dispatch(hideNoteGroupCreator())
       }
   }
 

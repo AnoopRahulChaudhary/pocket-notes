@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "./index.module.css"
 import { useDispatch } from "react-redux";
+import { hideNoteGroupCreator } from "../../actions/createNoteGroup";
 
 function AddNoteModal() {
     const dispatch = useDispatch();
@@ -60,9 +61,7 @@ function AddNoteModal() {
             payload: newNoteGroup
         })
 
-        dispatch({
-            type: 'HIDE_CREATE_NOTE_GROUP_CONTAINER'
-        });
+        dispatch(hideNoteGroupCreator());
     }
 
     return (
