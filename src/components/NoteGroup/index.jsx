@@ -1,6 +1,7 @@
 import React from "react";
 import getNoteGroupShortName from "../../utils/noteGroupShortName";
 import { useDispatch } from "react-redux";
+import { updateGroupSelection } from "../../actions/selectedNoteGroup";
 
 function NoteGroup({name, color}) {
     console.log(name);
@@ -9,10 +10,7 @@ function NoteGroup({name, color}) {
     const shortName = getNoteGroupShortName(name);
 
     function updateSelectedGroup() {
-        dispatch({
-            type: 'UPDATE_SELECTION',
-            payload: name
-        })
+        dispatch(updateGroupSelection(name))
     }
 
     return (
