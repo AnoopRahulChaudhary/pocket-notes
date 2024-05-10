@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import styles from "./index.module.css"
 import { useDispatch } from "react-redux";
-import { hideNoteGroupCreator } from "../../actions/createNoteGroup";
-import { addNoteGroup } from "../../actions/noteGroup";
+import { hideNoteGroupCreator } from "../../../actions/createNoteGroup";
+import { addNoteGroup } from "../../../actions/noteGroup";
 
-function AddNoteModal() {
+function CreateNoteGroup() {
     const dispatch = useDispatch();
 
     let groupData = {
@@ -88,4 +88,4 @@ function AddNoteModal() {
     );
 }
 
-export default AddNoteModal;
+export default CreateNoteGroup;

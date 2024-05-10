@@ -1,7 +1,7 @@
 import React from "react";
-import getNoteGroupShortName from "../../utils/noteGroupShortName";
+import getNoteGroupShortName from "../../../utils/noteGroupShortName";
 import { useDispatch } from "react-redux";
-import { updateGroupSelection } from "../../actions/selectedNoteGroup";
+import { updateGroupSelection } from "../../../actions/selectedNoteGroup";
 
 function NoteGroup({name, color}) {
     console.log(name);
