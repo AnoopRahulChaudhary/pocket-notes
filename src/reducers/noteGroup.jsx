@@ -1,4 +1,6 @@
-const oldNoteGroupList = JSON.parse(localStorage.getItem("noteGroupList")|| '[]');
+import { ADD_NOTE_GROUP } from "../actions/noteGroup";
+
+const oldNoteGroupList = JSON.parse(localStorage.getItem("noteGroupList")|| []);
 const initialState = {
     groups : [
         ...oldNoteGroupList
@@ -7,7 +9,7 @@ const initialState = {
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
-        case 'ADD': 
+        case ADD_NOTE_GROUP: 
             const newGroup = {
                 groupName : action.payload.groupName,
                 color : action.payload.color

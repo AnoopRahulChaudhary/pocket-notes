@@ -13,4 +13,4 @@ function hideNoteGroupCreator() {
     }
 }
 
-export {showNoteGroupCreator, hideNoteGroupCreator};
+export {SHOW_NOTE_GROUP_CREATOR, HIDE_NOTE_GROUP_CREATOR, showNoteGroupCreator, hideNoteGroupCreator};

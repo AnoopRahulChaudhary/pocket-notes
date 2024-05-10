@@ -1,5 +1,5 @@
 import { combineReducers } from "redux";
-import NoteGroupReducer from "./NoteGroups";
+import NoteGroupReducer from "./noteGroup";
 import notesReducer from './notes';
 import selectedNoteGroupReducer from './selectedNoteGroup'
 import createNoteGroupReducer from './createNoteGroup'

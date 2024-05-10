@@ -1,16 +1,18 @@
+import { SHOW_NOTE_GROUP_CREATOR, HIDE_NOTE_GROUP_CREATOR } from "../actions/createNoteGroup"
+
 const initialState = {
     show : false
 }
 
 const reducer = (state = initialState, action) => {
     switch(action.type) {
-        case 'SHOW_CREATE_NOTE_GROUP_CONTAINER': 
+        case SHOW_NOTE_GROUP_CREATOR: 
             return {
                 ...state,
                 show : true
             }
         
-        case 'HIDE_CREATE_NOTE_GROUP_CONTAINER': 
+        case HIDE_NOTE_GROUP_CREATOR: 
         return {
             ...state,
             show : false

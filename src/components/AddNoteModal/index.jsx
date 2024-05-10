@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styles from "./index.module.css"
 import { useDispatch } from "react-redux";
 import { hideNoteGroupCreator } from "../../actions/createNoteGroup";
+import { addNoteGroup } from "../../actions/noteGroup";
 
 function AddNoteModal() {
     const dispatch = useDispatch();
@@ -56,11 +57,7 @@ function AddNoteModal() {
 
         addNewNoteGroupToLocalStorage(newNoteGroup);
         
-        dispatch({
-            type : 'ADD',
-            payload: newNoteGroup
-        })
-
+        dispatch(addNoteGroup(newNoteGroup));
         dispatch(hideNoteGroupCreator());
     }
 
