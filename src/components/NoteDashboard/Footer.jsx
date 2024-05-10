@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
+import { addNote } from "../../actions/notes";
 
 function Footer({noteGroup}) {
     const [newNoteContent, setNewNoteContent] = useState('');
@@ -22,14 +23,11 @@ function Footer({noteGroup}) {
         console.debug(`updatedNotes - ${JSON.stringify(updatedNotes)}`);
         localStorage.setItem('notes', JSON.stringify(updatedNotes));
 
-        dispatch({
-            type : 'ADD_NEW_NOTE',
-            payload: {
-                noteGroup : noteGroup,
-                newNote: newNote
-            }
-        })
-        
+        const notePayload = {
+            noteGroup : noteGroup,
+            newNote: newNote
+        }
+        dispatch(addNote(notePayload))
     }
 
     return (
