@@ -1,0 +1,9 @@
+.app_name_container{
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    margin-left: 3vw;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
