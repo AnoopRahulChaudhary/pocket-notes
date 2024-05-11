@@ -4,8 +4,16 @@
     width: 100%;
     height: 7vh;
     display: flex;
+    align-items: center;
+    column-gap: 1vw;
     background-color: #001F8B;
     padding: 10px;
+}
+
+.back_symbol {
+    all: unset;
+    color: white;
+    cursor: pointer;
 }
 
 .short_name {

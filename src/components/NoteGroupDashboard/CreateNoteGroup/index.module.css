@@ -16,3 +16,9 @@
 .choose_color > input:checked {
     border: 2px solid black;
 }
+
+@media only screen and (max-width: 500px) {
+    .add_note_modal_container {
+        left: 15vw;
+    }
+}

@@ -45,11 +45,29 @@ function Footer({noteGroup}) {
                 >
                     {newNoteContent}
                 </textarea>
-            </div>
-            <div className={styles.add_note_button_container}>
-                {newNoteContent && <button className={styles.add_note_button} onClick={addNewNote}><img src={add_note_button_logo} alt="add_note_button_logo"/></button>}
+                
+                <div className={styles.add_note_button_container}>
+                    {newNoteContent && 
+                         <button 
+                            className={styles.add_note_button} 
+                            onClick={addNewNote}>
+                                <img 
+                                    src={add_note_button_logo} 
+                                    alt="add_note_button_logo"
+                                />
+                        </button>
+                    }
 
-                {!newNoteContent && <button className={styles.add_note_button_disabled} onClick={addNewNote} disabled><img src={add_note_disabled_button_logo} alt="add_note_disabled_button_logo"/></button>}
+                    {!newNoteContent && 
+                        <button 
+                            className={styles.add_note_button_disabled}
+                            onClick={addNewNote} disabled>
+                                <img 
+                                    src={add_note_disabled_button_logo} alt="add_note_disabled_button_logo"
+                                />
+                        </button>
+                    }
+                </div>
             </div>
         </div>
     )

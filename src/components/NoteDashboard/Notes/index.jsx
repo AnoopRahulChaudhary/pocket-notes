@@ -9,7 +9,7 @@ function Notes({noteGroup}) {
 
     return (
         <div className={styles.note_group_container}>
-            {notes && notes.map(note => <Note content={note.content} createDate={note.createDate} createTime={note.createTime}/>)}
+            {notes && notes.map((note, index) => <Note key={index} content={note.content} createDate={note.createDate} createTime={note.createTime}/>)}
         </div>
     )
 }

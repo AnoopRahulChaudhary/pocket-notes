@@ -30,14 +30,29 @@ function App() {
     hideNoteGroupAddPopup(element);
   }
 
+  function isNotMobileViewOrGroupNotSelected(){
+    return !isMobileView || !selectedNotesGroup;
+  }
+
   return (
     <div className="App" onClick={handleClick}>
-      <div className="app_note_group_container">
-        <AppName />
-        <NoteGroupDashboard />
-      </div>
+
+      {!isMobileView && 
+        <div className="app_note_group_container">
+          <AppName />
+          <NoteGroupDashboard />
+        </div>
+      }
+
+      {isMobileView && !selectedNotesGroup && 
+        <div className="app_note_group_container">
+          <AppName />
+          <NoteGroupDashboard />
+        </div>
+      }
+
       <div className="app_note_container">
-        {!selectedNotesGroup && <BlankNotePage />}
+        {!isMobileView && !selectedNotesGroup && <BlankNotePage />}
         {selectedNotesGroup && <NoteDashboard noteGroup={selectedNotesGroup}/>}
       </div>
     </div>

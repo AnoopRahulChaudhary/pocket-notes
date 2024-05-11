@@ -1,15 +1,17 @@
 .footer_container {
     position: fixed;
+    display: flex;
     bottom: 0px;
     background-color: #001F8B;
-    width: 100%;
+    width: 77%;
     height: 20vh;
     padding: 20px;
 }
 
 .note_input_area {
-    width: 76vw;
+    flex: 1 1 auto;
     height: 18vh;
+    position: relative;
     display: flex;
 }
 
@@ -27,9 +29,9 @@
 }
 
 .add_note_button_container {
-    position: fixed;
-    bottom: 5vh;
-    right: 5vw;
+    position: absolute;
+    bottom: 1vh;
+    right: 2vw;
 }
 
 .add_note_button {

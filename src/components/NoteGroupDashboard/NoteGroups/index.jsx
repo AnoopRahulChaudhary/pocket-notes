@@ -5,11 +5,11 @@ import styles from './index.module.css';
 
 function NoteGroups() {
     const groups = useSelector(state => state.NoteGroupReducer.groups);
-    console.debug(groups);
+    console.debug(JSON.stringify(groups));
 
     return (
         <div className={styles.note_groups_container}>
-            {groups.map(group => <NoteGroup name={group.groupName} color={group.color}/>)}
+            {groups.map((group, index) => <NoteGroup key={index} name={group.groupName} color={group.color}/>)}
         </div>
     );
 }
