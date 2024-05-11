@@ -3,8 +3,7 @@ import Note from "../Note";
 import { useSelector } from "react-redux";
 
 function Notes({noteGroup}) {
-    console.log('noteGroup in notes ' + noteGroup)
-    const notes = useSelector(state => state.notesReducer.notes[noteGroup]);
+    const notes = useSelector(state => state.notesReducer.notes[noteGroup.name]);
     console.log(notes);
 
     return (

@@ -7,14 +7,14 @@ const initialState = {
 const reducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_NOTE :
-            const noteGroup = action.payload.noteGroup;
-            let oldNotesOfGroup = state.notes[noteGroup] || [];
+            const noteGroupName = action.payload.noteGroupName;
+            let oldNotesOfGroup = state.notes[noteGroupName] || [];
             console.debug(oldNotesOfGroup)
             
             return {
                 notes : {
                     ...state.notes,
-                    [noteGroup] : [...oldNotesOfGroup, action.payload.newNote] 
+                    [noteGroupName] : [...oldNotesOfGroup, action.payload.newNote] 
                 }
             };
         default :

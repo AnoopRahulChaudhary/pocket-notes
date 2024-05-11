@@ -11,7 +11,11 @@ function NoteGroup({name, color}) {
     const shortName = getNoteGroupShortName(name);
 
     function updateSelectedGroup() {
-        dispatch(updateGroupSelection(name))
+        const groupPayLaod = {
+            name: name,
+            color: color
+        }
+        dispatch(updateGroupSelection(groupPayLaod))
     }
 
     return (
@@ -19,7 +23,6 @@ function NoteGroup({name, color}) {
             <div 
                 className={styles.short_name} 
                 style={{backgroundColor: color}} >
-                
                 <span>{shortName}</span>
             </div>
 

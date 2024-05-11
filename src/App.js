@@ -1,16 +1,16 @@
 import AppName from './components/AppName'
 import './App.css';
-import AddNoteGroupButton from './components/NoteGroupDashboard/AddNoteGroupButton';
-import NoteGroups from './components/NoteGroupDashboard/NoteGroups';
 import { useDispatch, useSelector } from 'react-redux';
 import NoteDashboard from './components/NoteDashboard';
 import { hideNoteGroupCreator } from './actions/createNoteGroup';
 import NoteGroupDashboard from './components/NoteGroupDashboard';
 
 function App() {
-  const selectedNotesGroup = useSelector(state => state.selectedNoteGroupReducer.name);
+  const selectedNotesGroup = useSelector(state => state.selectedNoteGroupReducer.selectedNoteGroup);
   const showCreateNoteGroup = useSelector(state => state.createNoteGroupReducer.show)
   const dispatch = useDispatch();
+
+  console.debug('selectedNotesGroup '+ JSON.stringify(selectedNotesGroup))
 
   function hideNoteGroupAddPopup(clickedElement) {
       if (!showCreateNoteGroup){

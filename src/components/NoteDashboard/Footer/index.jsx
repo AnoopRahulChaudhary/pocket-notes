@@ -16,15 +16,15 @@ function Footer({noteGroup}) {
         console.debug(newNote);
 
         let allNotes = JSON.parse(localStorage.getItem('notes')) || {};
-        let groupNotes = allNotes[noteGroup] || [];
+        let groupNotes = allNotes[noteGroup.name] || [];
         console.debug(allNotes);
         console.debug(groupNotes);
-        const updatedNotes = {...allNotes, [noteGroup]: [...groupNotes, newNote]};
+        const updatedNotes = {...allNotes, [noteGroup.name]: [...groupNotes, newNote]};
         console.debug(`updatedNotes - ${JSON.stringify(updatedNotes)}`);
         localStorage.setItem('notes', JSON.stringify(updatedNotes));
 
         const notePayload = {
-            noteGroup : noteGroup,
+            noteGroupName : noteGroup.name,
             newNote: newNote
         }
         dispatch(addNote(notePayload))

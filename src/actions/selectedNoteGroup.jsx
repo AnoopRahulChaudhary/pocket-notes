@@ -1,9 +1,9 @@
 const UPDATE_GROUP_SELECTION = 'UPDATE_GROUP_SELECTION';
 
-function updateGroupSelection(nextGroupName){
+function updateGroupSelection(groupPayload){
     return {
         type: UPDATE_GROUP_SELECTION,
-        payload: nextGroupName
+        payload: groupPayload
     }
 }
 

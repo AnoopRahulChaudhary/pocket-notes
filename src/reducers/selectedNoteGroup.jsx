@@ -1,7 +1,7 @@
 import { UPDATE_GROUP_SELECTION } from "../actions/selectedNoteGroup";
 
 const initialState = {
-    name : '' 
+    selectedNoteGroup : ''
 }
 
 const reducer = (state = initialState, action) => {
@@ -9,7 +9,7 @@ const reducer = (state = initialState, action) => {
         case UPDATE_GROUP_SELECTION: 
             return {
                 ...state,
-                name : action.payload
+                selectedNoteGroup: action.payload
             }
         default :
             return state;
