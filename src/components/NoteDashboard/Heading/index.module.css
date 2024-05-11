@@ -1,4 +1,8 @@
 .heading_container {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 7vh;
     display: flex;
     background-color: #001F8B;
     padding: 10px;
