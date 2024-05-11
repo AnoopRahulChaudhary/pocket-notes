@@ -1,6 +1,6 @@
 import { ADD_NOTE_GROUP } from "../actions/noteGroup";
 
-const oldNoteGroupList = JSON.parse(localStorage.getItem("noteGroupList")|| []);
+const oldNoteGroupList = JSON.parse(localStorage.getItem("noteGroupList")|| '[]');
 const initialState = {
     groups : [
         ...oldNoteGroupList

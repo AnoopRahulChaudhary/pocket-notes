@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { addNote } from "../../actions/notes";
+import { addNote } from "../../../actions/notes";
 
 function Footer({noteGroup}) {
     const [newNoteContent, setNewNoteContent] = useState('');

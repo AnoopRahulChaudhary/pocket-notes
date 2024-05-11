@@ -1,5 +1,5 @@
 import React from "react";
-import getNoteGroupShortName from "../../utils/noteGroupShortName";
+import getNoteGroupShortName from "../../../utils/noteGroupShortName";
 
 function Heading({noteGroup}) {
     const shortNameForNoteGroup = getNoteGroupShortName(noteGroup);
