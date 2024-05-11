@@ -28,12 +28,12 @@ function App() {
   }
 
   return (
-    <div style={{display: 'flex'}} className="App" onClick={handleClick}>
-      <div style={{width: '30vw'}}>
+    <div className="App" onClick={handleClick}>
+      <div className="app_note_group_container">
         <AppName />
         <NoteGroupDashboard />
       </div>
-      <div style={{width: '70vw'}}>
+      <div className="app_note_container">
         {selectedNotesGroup && <NoteDashboard noteGroup={selectedNotesGroup}/>}
       </div>
     </div>

@@ -8,7 +8,7 @@
 }
 
 .note_input_area {
-    width: 67vw;
+    width: 76vw;
     height: 18vh;
     display: flex;
 }
@@ -23,6 +23,7 @@
     font-weight: 400;
     font-size: 1.5rem;
     color: #9A9A9A;
+    margin-left: 1vw;
 }
 
 .add_note_button {

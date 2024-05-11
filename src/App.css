@@ -1,3 +1,12 @@
 .App{
     height: 100vh;
+    display: flex;
+}
+
+.app_note_group_container{
+    width: 20vw;
+}
+
+.app_note_container {
+    width: 80vw;
 }
