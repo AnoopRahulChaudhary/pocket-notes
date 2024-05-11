@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addNote } from "../../../actions/notes";
+import styles from "./index.module.css"
 
 function Footer({noteGroup}) {
     const [newNoteContent, setNewNoteContent] = useState('');
@@ -31,20 +32,22 @@ function Footer({noteGroup}) {
     }
 
     return (
-        <div>
-            <textarea 
-                    onChange={(e) => setNewNoteContent(e.target.value)} 
-                    name="newNote" 
-                    id="newNote" 
-                    cols="30" 
-                    rows="10">
-                {newNoteContent}
-            </textarea>
-            <div>
+        <div className={styles.footer_container}>
+            <div className={styles.note_input_area}>
+                <textarea 
+                        className={styles.note_input_area}
+                        onChange={(e) => setNewNoteContent(e.target.value)} 
+                        placeholder="Enter your text here..........."
+                        name="newNote" 
+                        id="newNote" 
+                >
+                    {newNoteContent}
+                </textarea>
+            </div>
+            <div className={styles.add_note_button}>
                 {newNoteContent && <button onClick={addNewNote}>Add Note</button>}
                 {!newNoteContent && <button onClick={addNewNote} disabled>Add Note</button>}
             </div>
-            
         </div>
     )
 
