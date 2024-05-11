@@ -1,0 +1,23 @@
+.note_card {
+    display: flex;
+    flex-direction: column;
+    font-family: "Roboto", sans-serif;
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.15), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+    padding: 10px;
+}
+
+.content {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: #000000;
+}
+
+.date_and_time {
+    align-self: end;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    color: #353535;
+    font-size: 0.9rem;
+}
