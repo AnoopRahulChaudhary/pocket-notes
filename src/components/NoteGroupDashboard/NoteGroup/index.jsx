@@ -1,11 +1,11 @@
 import React from "react";
 import getNoteGroupShortName from "../../../utils/noteGroupShortName";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { updateGroupSelection } from "../../../actions/selectedNoteGroup";
 import styles from './index.module.css'
 
 function NoteGroup({name, color}) {
-    console.log(name);
+    const selectedNotesGroup = useSelector(state => state.selectedNoteGroupReducer.selectedNoteGroup);
     const dispatch = useDispatch();
 
     const shortName = getNoteGroupShortName(name);
@@ -19,7 +19,10 @@ function NoteGroup({name, color}) {
     }
 
     return (
-        <div onClick={updateSelectedGroup} className={styles.note_group_container}>
+        <div 
+            onClick={updateSelectedGroup} 
+            className={styles.note_group_container}
+         >
             <div 
                 className={styles.short_name} 
                 style={{backgroundColor: color}} >
