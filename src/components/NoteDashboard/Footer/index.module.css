@@ -26,8 +26,17 @@
     margin-left: 1vw;
 }
 
-.add_note_button {
+.add_note_button_container {
     position: fixed;
     bottom: 5vh;
     right: 5vw;
+}
+
+.add_note_button {
+    all: unset;
+    cursor: pointer;
+}
+
+.add_note_button_disabled {
+    all: unset;
 }

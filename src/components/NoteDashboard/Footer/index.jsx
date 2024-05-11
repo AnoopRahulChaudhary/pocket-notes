@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addNote } from "../../../actions/notes";
 import styles from "./index.module.css"
+import add_note_button_logo from '../../../assets/add_note_button.png'
+import add_note_disabled_button_logo from '../../../assets/add_note_disabled_button.png'
 
 function Footer({noteGroup}) {
     const [newNoteContent, setNewNoteContent] = useState('');
@@ -44,9 +46,10 @@ function Footer({noteGroup}) {
                     {newNoteContent}
                 </textarea>
             </div>
-            <div className={styles.add_note_button}>
-                {newNoteContent && <button onClick={addNewNote}>Add Note</button>}
-                {!newNoteContent && <button onClick={addNewNote} disabled>Add Note</button>}
+            <div className={styles.add_note_button_container}>
+                {newNoteContent && <button className={styles.add_note_button} onClick={addNewNote}><img src={add_note_button_logo} alt="add_note_button_logo"/></button>}
+
+                {!newNoteContent && <button className={styles.add_note_button_disabled} onClick={addNewNote} disabled><img src={add_note_disabled_button_logo} alt="add_note_disabled_button_logo"/></button>}
             </div>
         </div>
     )
