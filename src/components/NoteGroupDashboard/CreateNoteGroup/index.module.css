@@ -4,6 +4,42 @@
     top: 40vh;
     left: 40vw;
     background-color: white;
+    border: 0.5px solid black;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    border-radius: 16px;
+    font-family: "Roboto", sans-serif;
+}
+
+.create_new_group_text {
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.group_name_text {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.group_name_input {
+    border: 2px solid rgb(0, 0, 0, 0.17);
+    border-radius: 22px;
+    padding: 5px;
+    margin-left: 1vw;
+    font-weight: 400;
+    font-size: 0.8rem;
+    color: #979797;
+}
+
+.choose_color_text {
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.choose_color {
+    margin-left: 1vw;
 }
 
 .choose_color > input {
@@ -17,8 +53,31 @@
     border: 2px solid black;
 }
 
+.create_note_group_button_container {
+    align-self: end;
+}
+
+.create_note_group_button{
+    background-color: #001F8B;
+    color: white;
+    border-radius: 11px;
+    border: none;
+    padding: 5px;
+    padding-left: 2vw;
+    padding-right: 2vw;
+}
+
 @media only screen and (max-width: 500px) {
     .add_note_modal_container {
         left: 15vw;
+    }
+
+    .create_note_group_button_container {
+        align-self: center;
+    }
+
+    .create_note_group_button{
+        padding-left: 10vw;
+        padding-right: 10vw;
     }
 }

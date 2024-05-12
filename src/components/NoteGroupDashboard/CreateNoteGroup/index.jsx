@@ -68,15 +68,18 @@ function CreateNoteGroup() {
 
     return (
         <div id="createNoteGroupContainer">
-            <form onSubmit={(e) => addNewGroup(e)} style={{border: '1px solid black', padding: '10px'}} className={styles.add_note_modal_container}>
+            <form onSubmit={(e) => addNewGroup(e)} className={styles.add_note_modal_container}>
+                <div>
+                    <p className={styles.create_new_group_text}>Create New group</p>
+                </div>
 
-                <p>Create New group</p>
-
-                <label htmlFor="group-name">Group Name</label>
-                <input id="group-name" type="text" name="groupName"/><br/>
+                <div>
+                    <label className={styles.group_name_text} htmlFor="group-name">Group Name</label>&nbsp;
+                    <input className={styles.group_name_input} id="group-name" type="text" name="groupName" placeholder="Enter group name"/><br/>
+                </div>
 
                 <div style={{display: 'flex'}}>
-                    <div><label htmlFor="colour">Choose colour</label></div>
+                    <div><label className={styles.choose_color_text} htmlFor="colour">Choose colour</label></div>
                     <div className={styles.choose_color}>
                         <input style={{backgroundColor: '#B38BFA'}} type="radio" name="color" value="#B38BFA" />
                         <input style={{backgroundColor: '#FF79F2'}} type="radio" name="color" value="#FF79F2" />
@@ -86,7 +89,10 @@ function CreateNoteGroup() {
                         <input style={{backgroundColor: '#6691FF'}} type="radio" name="color" value="#6691FF" />
                     </div>
                 </div>
-                <input type="submit" value="create" />
+
+                <div className={styles.create_note_group_button_container}>
+                    <input className={styles.create_note_group_button} type="submit" value="create" />
+                </div>
             </form>
         </div>
         
