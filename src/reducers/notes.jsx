@@ -1,4 +1,5 @@
 import { ADD_NOTE } from "../actions/notes";
+import { updateNotes } from "../utils/updateNotes";
 
 const initialState = {
     notes : {...JSON.parse(localStorage.getItem("notes"))}
@@ -7,14 +8,11 @@ const initialState = {
 const reducer = (state = initialState, action) => {
     switch (action.type) {
         case ADD_NOTE :
-            const noteGroupName = action.payload.noteGroupName;
-            let oldNotesOfGroup = state.notes[noteGroupName] || [];
-            console.debug(oldNotesOfGroup)
-            
+            const updatedNotes = 
+                updateNotes(state.notes, action.payload.newNote, action.payload.noteGroupName);
             return {
                 notes : {
-                    ...state.notes,
-                    [noteGroupName] : [...oldNotesOfGroup, action.payload.newNote] 
+                    ...updatedNotes
                 }
             };
         default :
