@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./index.module.css"
 import { useDispatch } from "react-redux";
 import { hideNoteGroupCreator } from "../../../actions/createNoteGroup";

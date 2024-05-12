@@ -30,10 +30,6 @@ function App() {
     hideNoteGroupAddPopup(element);
   }
 
-  function isNotMobileViewOrGroupNotSelected(){
-    return !isMobileView || !selectedNotesGroup;
-  }
-
   return (
     <div className="App" onClick={handleClick}>
 

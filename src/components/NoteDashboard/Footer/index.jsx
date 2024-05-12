@@ -4,27 +4,37 @@ import { addNote } from "../../../actions/notes";
 import styles from "./index.module.css"
 import add_note_button_logo from '../../../assets/add_note_button.png'
 import add_note_disabled_button_logo from '../../../assets/add_note_disabled_button.png'
+import moment from 'moment';
 
 function Footer({noteGroup}) {
     const [newNoteContent, setNewNoteContent] = useState('');
     const dispatch = useDispatch();
 
-    function addNewNote() {
+    function prepareNewNoteObject() {
         const now = new Date();
-        const newNote = {
+        return {
             content : newNoteContent,
-            createDate : now.getTime(),
-            createTime : now.getDate()
+            dateTimeInMilliSecond : now.getMilliseconds,
+            createDate : moment(now).format('D MMMM YYYY'),
+            createTime : moment(now).format('h:mm a'),
         }
-        console.debug(newNote);
+    }
 
+    function saveNewNoteToLocalStarage(newNote) {
         let allNotes = JSON.parse(localStorage.getItem('notes')) || {};
         let groupNotes = allNotes[noteGroup.name] || [];
-        console.debug(allNotes);
-        console.debug(groupNotes);
+        console.debug(`old notes in localstorage ${JSON.stringify(allNotes)}`);
+        console.debug(`old group notes in localstorage for group ${noteGroup.name} : ${groupNotes}`);
         const updatedNotes = {...allNotes, [noteGroup.name]: [...groupNotes, newNote]};
         console.debug(`updatedNotes - ${JSON.stringify(updatedNotes)}`);
         localStorage.setItem('notes', JSON.stringify(updatedNotes));
+    }
+
+    function addNewNote() {
+        const newNote = prepareNewNoteObject();
+        console.debug(`new note - groupName ${noteGroup.name} : ${JSON.stringify(newNote)}`);
+
+        saveNewNoteToLocalStarage(newNote);
 
         const notePayload = {
             noteGroupName : noteGroup.name,
