@@ -1,7 +1,7 @@
 import React from "react";
 import Heading from "./Heading";
 import Notes from "./Notes";
-import Footer from "./Footer";
+import NoteInputArea from "./NoteInputArea";
 import styles from './index.module.css'
 
 function NoteDashboard({noteGroup}) {
@@ -9,7 +9,7 @@ function NoteDashboard({noteGroup}) {
         <div className={styles.note_dashboard_container}>
             <Heading noteGroup={noteGroup}/>
             <Notes noteGroup={noteGroup}/>
-            <Footer noteGroup={noteGroup}/>
+            <NoteInputArea noteGroup={noteGroup}/>
         </div>
     );
 }

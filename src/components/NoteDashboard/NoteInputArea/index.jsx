@@ -7,7 +7,7 @@ import add_note_disabled_button_logo from '../../../assets/add_note_disabled_but
 import moment from 'moment';
 import { updateNotes } from "../../../utils/updateNotes";
 
-function Footer({noteGroup}) {
+function NoteInputArea({noteGroup}) {
     const [newNoteContent, setNewNoteContent] = useState('');
     const dispatch = useDispatch();
 
@@ -80,4 +80,4 @@ function Footer({noteGroup}) {
 
 }
 
-export default Footer;
+export default NoteInputArea;
