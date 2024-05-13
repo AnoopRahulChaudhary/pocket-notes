@@ -4,16 +4,36 @@
 }
 
 .app_note_group_container{
-    width: 20vw;
-}
-
-@media only screen and (max-width: 500px) {
-    .app_note_group_container{
-        width: 100vw;
-    }
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex: 25%;
 }
 
 .app_note_container {
-    width: 80vw;
+    display: flex;
+    flex: 75%;
     background-color: #DAE5F5;
+}
+
+@media only screen and (max-width: 768px) {
+    .app_note_group_container{
+        flex: 30%;
+    }
+
+    .app_note_container {
+        flex: 70%;
+        background-color: #DAE5F5;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    .app_note_group_container{
+        flex: 100%;
+    }
+
+    .app_note_container {
+        flex: 100%;
+        background-color: #DAE5F5;
+    }
 }

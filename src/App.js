@@ -11,7 +11,7 @@ function App() {
   const selectedNotesGroup = useSelector(state => state.selectedNoteGroupReducer.selectedNoteGroup);
   const showCreateNoteGroup = useSelector(state => state.createNoteGroupReducer.show)
   const dispatch = useDispatch();
-  const isMobileView = useMediaQuery({ maxWidth: 500 })
+  const isMobileView = useMediaQuery({ maxWidth: 576 })
 
   console.debug('selectedNotesGroup '+ JSON.stringify(selectedNotesGroup))
 
@@ -47,10 +47,17 @@ function App() {
         </div>
       }
 
-      <div className="app_note_container">
-        {!isMobileView && !selectedNotesGroup && <BlankNotePage />}
-        {selectedNotesGroup && <NoteDashboard noteGroup={selectedNotesGroup}/>}
-      </div>
+      {!isMobileView && !selectedNotesGroup && 
+        <div className="app_note_container">
+          <BlankNotePage />
+        </div>
+      }
+
+      {selectedNotesGroup && 
+        <div className="app_note_container">
+          <NoteDashboard noteGroup={selectedNotesGroup}/>
+        </div>
+      } 
     </div>
   );
 }

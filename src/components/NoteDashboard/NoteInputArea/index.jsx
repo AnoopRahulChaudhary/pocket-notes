@@ -40,8 +40,7 @@ function NoteInputArea({noteGroup}) {
     }
 
     return (
-        <div className={styles.footer_container}>
-            <div className={styles.note_input_area}>
+        <div className={styles.note_input_area}>
                 <textarea 
                         className={styles.note_input_area}
                         onChange={(e) => setNewNoteContent(e.target.value)} 
@@ -75,7 +74,6 @@ function NoteInputArea({noteGroup}) {
                     }
                 </div>
             </div>
-        </div>
     )
 
 }

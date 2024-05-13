@@ -1,22 +1,13 @@
-.footer_container {
-    position: fixed;
-    display: flex;
-    bottom: 0px;
-    background-color: #001F8B;
-    width: 77%;
-    height: 20vh;
-    padding: 20px;
-}
-
 .note_input_area {
-    flex: 1 1 auto;
-    height: 18vh;
+    flex: 30%;
     position: relative;
     display: flex;
+    background-color: #001F8B;
+    align-items: center;
+    justify-content: center;
 }
 
 .note_input_area > textarea {
-    flex: 1 1 auto;
     border-radius: 10px;
     padding: 10px;
     background-color: white;
@@ -25,13 +16,14 @@
     font-weight: 400;
     font-size: 1.5rem;
     color: #9A9A9A;
-    margin-left: 1vw;
+    height: 80%;
+    margin: 20px;
 }
 
 .add_note_button_container {
     position: absolute;
-    bottom: 1vh;
-    right: 2vw;
+    bottom: 30px;
+    right: 40px;
 }
 
 .add_note_button {

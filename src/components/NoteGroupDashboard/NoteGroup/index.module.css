@@ -1,6 +1,7 @@
 .note_group_container {
     display: flex;
     cursor: pointer;
+    padding-left: 2vw;
 }
 
 .short_name {

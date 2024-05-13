@@ -1,11 +1,8 @@
 .note_group_container{
-    position: fixed;
     display: flex;
     flex-direction: column;
-    margin: 2.4vh;
     row-gap: 2vh;
-    padding: 20px;
-    top: 7vh;
-    height: 60vh;
     overflow-y: scroll;
+    flex: 80%;
+    margin: 15px;
 }

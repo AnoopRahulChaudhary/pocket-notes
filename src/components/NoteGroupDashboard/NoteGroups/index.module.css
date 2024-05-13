@@ -1,6 +1,6 @@
 .note_groups_container {
-    position: fixed;
-    top: 10vh;
+    position: relative;
+    top: 0;
     height: 80vh;
     display: flex;
     flex-direction: column;

@@ -67,7 +67,7 @@
     padding-right: 2vw;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 576px) {
     .add_note_modal_container {
         left: 15vw;
     }

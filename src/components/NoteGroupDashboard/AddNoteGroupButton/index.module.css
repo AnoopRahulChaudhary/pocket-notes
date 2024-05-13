@@ -1,10 +1,10 @@
 .add_note_group_button {
-    position: fixed;
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
-    bottom: 4vh;
-    left: 10vw;
+    bottom: 6vh;
+    right: 4vw;
     background-color: #16008B;
     border-radius: 50%;
     border: none;
