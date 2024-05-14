@@ -7,7 +7,7 @@ import { updateGroupSelection } from "../../../actions/selectedNoteGroup";
 
 
 function Heading({noteGroup}) {
-    const isMobileView = useMediaQuery({ maxWidth: 500 });
+    const isMobileView = useMediaQuery({ maxWidth: 576 });
     const shortName = getNoteGroupShortName(noteGroup.name);
     const dispatch = useDispatch();
 
