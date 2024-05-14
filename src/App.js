@@ -6,12 +6,13 @@ import { hideNoteGroupCreator } from './actions/createNoteGroup';
 import NoteGroupDashboard from './components/NoteGroupDashboard';
 import BlankNotePage from './components/NoteGroupDashboard/BlankNotePage';
 import { useMediaQuery } from 'react-responsive'
+import { MOBILE_VIEW_WIDTH } from './constants/deviceWidth';
 
 function App() {
   const selectedNotesGroup = useSelector(state => state.selectedNoteGroupReducer.selectedNoteGroup);
   const showCreateNoteGroup = useSelector(state => state.createNoteGroupReducer.show)
   const dispatch = useDispatch();
-  const isMobileView = useMediaQuery({ maxWidth: 576 })
+  const isMobileView = useMediaQuery({ maxWidth: MOBILE_VIEW_WIDTH })
 
   console.debug('selectedNotesGroup '+ JSON.stringify(selectedNotesGroup))
 

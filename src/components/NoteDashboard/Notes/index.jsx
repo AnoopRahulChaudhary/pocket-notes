@@ -5,7 +5,7 @@ import styles from './index.module.css'
 
 function Notes({noteGroup}) {
     const notes = useSelector(state => state.notesReducer.notes[noteGroup.name]);
-    console.log(notes);
+    console.debug(`notes to render - ${JSON.stringify(notes)}`);
 
     return (
         <div className={styles.note_group_container}>

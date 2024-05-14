@@ -5,7 +5,7 @@ import styles from './index.module.css';
 
 function NoteGroups() {
     const groups = useSelector(state => state.NoteGroupReducer.groups);
-    console.debug(JSON.stringify(groups));
+    console.debug(`note-groups to render ${JSON.stringify(groups)}`);
 
     return (
         <div className={styles.note_groups_container}>

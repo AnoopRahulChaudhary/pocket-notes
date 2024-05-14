@@ -4,10 +4,12 @@ import styles from './index.module.css';
 import { useMediaQuery } from 'react-responsive';
 import { useDispatch } from "react-redux";
 import { updateGroupSelection } from "../../../actions/selectedNoteGroup";
+import { MOBILE_VIEW_WIDTH } from "../../../constants/deviceWidth";
+
 
 
 function Heading({noteGroup}) {
-    const isMobileView = useMediaQuery({ maxWidth: 576 });
+    const isMobileView = useMediaQuery({ maxWidth: MOBILE_VIEW_WIDTH });
     const shortName = getNoteGroupShortName(noteGroup.name);
     const dispatch = useDispatch();
 
