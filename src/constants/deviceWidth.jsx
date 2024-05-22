@@ -1,3 +1,0 @@
-const MOBILE_VIEW_WIDTH = 576;
-
-export {MOBILE_VIEW_WIDTH};
