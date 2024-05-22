@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/pocket-notes/static/css/main.5e4b424e.css",
+    "main.js": "/pocket-notes/static/js/main.5abab4dc.js",
+    "static/media/note_app_logo_for_blank_page.png": "/pocket-notes/static/media/note_app_logo_for_blank_page.5e03ac962edc48052378.png",
+    "index.html": "/pocket-notes/index.html",
+    "static/media/plus-lg.svg": "/pocket-notes/static/media/plus-lg.e1979c7338d3e46f680c424e7901810c.svg",
+    "main.5e4b424e.css.map": "/pocket-notes/static/css/main.5e4b424e.css.map",
+    "main.5abab4dc.js.map": "/pocket-notes/static/js/main.5abab4dc.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5e4b424e.css",
+    "static/js/main.5abab4dc.js"
+  ]
+}
